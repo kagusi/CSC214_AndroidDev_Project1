@@ -37,7 +37,7 @@ public class HostActivity extends AppCompatActivity implements MenuFragment.menu
     //public static final String KEY_MENUFRAG = "HOST.MENUFRAG";
 
 
-    private String mWhichFrag = "A";
+    private String mWhichFragg = "A";
 
     //Fragments hosted by this activity
     private MenuFragment mMenuFragment;
@@ -63,7 +63,7 @@ public class HostActivity extends AppCompatActivity implements MenuFragment.menu
             //Restore Players
             this.mPlayerOne = (Player)savedInstanceState.getSerializable(KEY_PLAYERONE);
             this.mPlayerTwo = (Player)savedInstanceState.getSerializable(KEY_PLAYERTWO);
-            this.mWhichFrag = savedInstanceState.getString(KEY_WHICHFRAG);
+            this.mWhichFragg = savedInstanceState.getString(KEY_WHICHFRAG);
 
             //this.mHotterColderFragment = (HotterColderFragment)savedInstanceState.getSerializable(KEY_HOTFRAG);
 
@@ -85,7 +85,7 @@ public class HostActivity extends AppCompatActivity implements MenuFragment.menu
                     .beginTransaction()
                     .add(R.id.activity_hostRelativeLayout, mMenuFragment)
                     .commit();
-            //mWhichFrag = "MENU";
+            //mWhichFragg = "MENU";
 
         }
 
@@ -138,7 +138,7 @@ public class HostActivity extends AppCompatActivity implements MenuFragment.menu
 
         state.putSerializable(KEY_PLAYERONE, this.mPlayerOne);
         state.putSerializable(KEY_PLAYERTWO, this.mPlayerTwo);
-        state.putString(KEY_WHICHFRAG, mWhichFrag);
+        state.putString(KEY_WHICHFRAG, mWhichFragg);
         state.putSerializable(KEY_HOTFRAG, mHotterColderFragment);
 
     }
@@ -151,7 +151,7 @@ public class HostActivity extends AppCompatActivity implements MenuFragment.menu
         //Restore Players
         this.mPlayerOne = (Player)savedInstanceState.getSerializable(KEY_PLAYERONE);
         this.mPlayerTwo = (Player)savedInstanceState.getSerializable(KEY_PLAYERTWO);
-        this.mWhichFrag = savedInstanceState.getString(KEY_WHICHFRAG);
+        this.mWhichFragg = savedInstanceState.getString(KEY_WHICHFRAG);
         //this.mHotterColderFragment = (HotterColderFragment)savedInstanceState.getSerializable(KEY_HOTFRAG);
 
     }
@@ -215,7 +215,7 @@ public class HostActivity extends AppCompatActivity implements MenuFragment.menu
                     .add(R.id.activity_hostRelativeLayout, mHangmanFragment)
                     .commit();
 
-            mWhichFrag = "HANG";
+            mWhichFragg = "HANG";
         }
         else if(gameName.equals("Connect"))
         {
@@ -237,13 +237,10 @@ public class HostActivity extends AppCompatActivity implements MenuFragment.menu
                     .add(R.id.activity_hostRelativeLayout, mConnect4Fragment)
                     .commit();
 
-            mWhichFrag = "HANG";
+            mWhichFragg = "HANG";
 
         }
-        else
-        {
 
-        }
     }
 
     @Override
