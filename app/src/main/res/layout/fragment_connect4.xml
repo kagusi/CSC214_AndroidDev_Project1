@@ -1,0 +1,98 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_below="@+id/ScoreLayout"
+             tools:context="assignment02.csc214.project1.Connect4Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/click_on_a_column_to_play"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="30dp"
+            android:textColor="#0e127c"/>
+
+        <LinearLayout
+            android:layout_width="370dp"
+            android:layout_height="400dp"
+            android:layout_gravity="center">
+
+            <GridView
+                android:id="@+id/connect4_gridview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnWidth="10dp"
+                android:numColumns="6"
+                android:verticalSpacing="2dp"
+                android:horizontalSpacing="2dp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#23729c"/>
+
+        </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/connect4_currentPlayerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/current_player"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#040404"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/connect4_newGameButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/new_game"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/buttonshape"
+                android:layout_marginStart="10dp"/>
+
+
+            <Button
+                android:id="@+id/connect4_exitbutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/con_exit"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/buttonshape"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

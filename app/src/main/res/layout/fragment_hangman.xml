@@ -1,0 +1,118 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_below="@+id/ScoreLayout"
+             tools:context="assignment02.csc214.project1.HangmanFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/Hangman_CurrentPlayerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/hang_current_player"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#3b1f1f"/>
+
+        <TextView
+            android:id="@+id/Hangman_NumberOfGuessTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/hang_number_of_guesses"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#3b1f1f"/>
+
+        <ImageView
+            android:id="@+id/Hangman_ImageView"
+            android:layout_width="fill_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/hang_image_display"
+
+            android:layout_gravity="fill"/>
+        
+        <TextView
+            android:id="@+id/Hangman_DisplayGuessesdTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/hang_displaygueses"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#040404"/>
+
+        <EditText
+            android:id="@+id/Hangman_enterATextEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:hint="@string/hang_enter_a_letter_a_z"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/Hangman_GuessButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/hang_guess"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/buttonshape"
+                android:layout_marginStart="10dp"/>
+
+
+            <Button
+                android:id="@+id/Hangman_NewGameButton"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/hang_new_game"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/buttonshape"
+                android:layout_marginStart="10dp"/>
+
+
+            <Button
+                android:id="@+id/Hangman_ExitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hang_exit"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/buttonshape"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

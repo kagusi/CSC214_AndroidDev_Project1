@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Project1</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="player_two">Player Two</string>
+    <string name="player_one">Player One</string>
+    <string name="zero">0.0</string>
+    <string name="please_select_a_game">PLEASE SELECT A GAME</string>
+    <string name="hotter_colder">Hotter/Colder</string>
+    <string name="hangman">Hangman</string>
+    <string name="connect_4">Connect 4</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="welcome_to_tripple_game">Welcome To Tripple Game</string>
+    <string name="designed_by">Designed by</string>
+    <string name="kennedy_agusi">KENNEDY AGUSI</string>
+    <string name="please_enter_players_names">PLEASE ENTER PLAYERS NAMES</string>
+    <string name="first_player">FIRST PLAYER</string>
+    <string name="enter_first_player_s_name">Enter First Player\'s Name</string>
+    <string name="second_player">SECOND PLAYER</string>
+    <string name="enter_second_player_s_name">Enter Second Player\'s Name</string>
+    <string name="launch_game">LAUNCH GAME</string>
+    <string name="exit">EXIT</string>
+    <string name="click_on_a_column_to_play">CLICK ON A COLUMN TO PLAY</string>
+    <string name="current_player">Current Player</string>
+    <string name="new_game">New Game</string>
+    <string name="con_exit">EXIT</string>
+    <string name="hang_current_player">Current Player</string>
+    <string name="hang_number_of_guesses">Number of Guesses</string>
+    <string name="hang_image_display">Hangman Image Display</string>
+    <string name="hang_displaygueses">___ ___ ___ ___</string>
+    <string name="hang_enter_a_letter_a_z">Enter a Letter (A - Z)</string>
+    <string name="hang_guess">Guess</string>
+    <string name="hang_new_game">New Game</string>
+    <string name="hang_exit">EXIT</string>
+    <string name="guess_a_number_between_1_10">Guess a Number Between 1-10</string>
+    <string name="enter_a_number">Enter a Number</string>
+    <string name="guess">GUESS</string>
+    <string name="hot_new_game">NEW GAME</string>
+    <string name="hot_exit">EXIT</string>
+
+</resources>

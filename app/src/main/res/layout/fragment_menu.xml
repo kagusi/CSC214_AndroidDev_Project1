@@ -1,0 +1,79 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_below="@+id/ScoreLayout"
+             android:background="#faf8f8"
+             tools:context="assignment02.csc214.project1.MenuFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/SelectAGameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/please_select_a_game"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#080808"/>
+
+        <Button
+            android:id="@+id/Menu_Hotter_Colder"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/hotter_colder"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/buttonshape"/>
+
+        <Button
+            android:id="@+id/Menu_Hangman"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:text="@string/hangman"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/buttonshape"/>
+
+        <Button
+            android:id="@+id/Menu_Connect4"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:text="@string/connect_4"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/buttonshape"/>
+
+        <Button
+            android:id="@+id/Menu_ExitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:text="@string/exit"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/buttonshape"/>
+
+    </LinearLayout>
+
+</FrameLayout>
