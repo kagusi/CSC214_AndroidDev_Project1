@@ -33,7 +33,7 @@
     <string name="hang_guess">Guess</string>
     <string name="hang_new_game">New Game</string>
     <string name="hang_exit">EXIT</string>
-    <string name="guess_a_number_between_1_10">Guess a Number Between 1-10</string>
+    <string name="guess_a_number_between_1_10">Guess a Number Between 1-20</string>
     <string name="enter_a_number">Enter a Number</string>
     <string name="guess">GUESS</string>
     <string name="hot_new_game">NEW GAME</string>

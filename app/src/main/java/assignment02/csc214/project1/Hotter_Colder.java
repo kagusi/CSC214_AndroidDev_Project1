@@ -26,7 +26,7 @@ public class Hotter_Colder implements Serializable {
     private boolean mIsGameOver;
 
 
-    public Hotter_Colder(Player playerOne, Player playerTwo)
+    private Hotter_Colder(Player playerOne, Player playerTwo)
     {
         this.mPlayerOne = playerOne;
         this.mPlayerTwo = playerTwo;
@@ -35,7 +35,7 @@ public class Hotter_Colder implements Serializable {
         this.mPlayerOneNumberOfGuess = 0;
         this.mPlayerOneNumberOfGuess = 0;
         this.mIsGameOver = false;
-        this.mGeneratedNumber = (int)(Math.random() * 10);
+        this.mGeneratedNumber = (int)(Math.random() * 20);
     }
 
     public static synchronized Hotter_Colder getInstance(Player playerOne, Player playerTwo)
@@ -56,7 +56,7 @@ public class Hotter_Colder implements Serializable {
     //Generates new number
     public void generateNumber() {
         resetGame();
-        this.mGeneratedNumber = (int)(Math.random() * 10);
+        this.mGeneratedNumber = (int)(Math.random() * 20);
     }
 
     //Start Game, Compares guessed number with generated number
@@ -72,10 +72,10 @@ public class Hotter_Colder implements Serializable {
         int far = guessedNumber - this.mGeneratedNumber;
 
         //If current player is player one
-        if(mPlayerOne.isPlaying() == true)
+        if(mPlayerOne.isPlaying())
             this.mPlayerOneNumberOfGuess++;
             //If currentr player is player two
-        else if(mPlayerTwo.isPlaying() == true)
+        else if(mPlayerTwo.isPlaying())
             this.mPlayerTwoNumberOfGuess++;
         else
             return "Please Start New Game!";
@@ -87,7 +87,7 @@ public class Hotter_Colder implements Serializable {
             */
 
             //Player one completed round
-            if(mPlayerOne.isPlaying() == true)
+            if(mPlayerOne.isPlaying())
             {
                 mPlayerOne.setDonePlayingRound(true);
                 mPlayerOne.setIsPlaying(false);
@@ -112,22 +112,22 @@ public class Hotter_Colder implements Serializable {
             return "On Fire!";
         else if(close >= 0 && close <= 10)
             return "Hot!";
-        else if(close >= 0 && close <= 20)
+        else if(close >= 0 && close <= 15)
             return "Warmer!";
-        else if(close >= 0 && close > 20)
+        else if(close >= 0 && close > 15)
             return "Warm";
         else if(far <= 5)
             return "Cold";
         else if(far <= 10)
             return "Colder!";
-        else if(far <= 20)
+        else if(far <= 15)
             return "Freezing!";
         else
             return "Absolute Zero";
     }
 
     //Calculates players scores
-    public String computeScore()
+    private String computeScore()
     {
         if(this.mPlayerOneNumberOfGuess > this.mPlayerTwoNumberOfGuess)
         {
@@ -169,9 +169,9 @@ public class Hotter_Colder implements Serializable {
 
     public String getWhosTurn()
     {
-        if(mPlayerOne.isPlaying() == true)
+        if(mPlayerOne.isPlaying())
             return mPlayerOne.getPlayerName()+"'s"+" turn";
-        else if(mPlayerTwo.isPlaying() == true)
+        else if(mPlayerTwo.isPlaying())
             return mPlayerTwo.getPlayerName()+"'s"+" turn";
         else
             return "Please Start New Game";
@@ -179,16 +179,16 @@ public class Hotter_Colder implements Serializable {
 
     public String getCurrentPlayer()
     {
-        if(mPlayerOne.isPlaying() == true)
+        if(mPlayerOne.isPlaying())
             return mPlayerOne.getPlayerName();
-        else if(mPlayerTwo.isPlaying() == true)
+        else if(mPlayerTwo.isPlaying())
             return mPlayerTwo.getPlayerName();
         else
             return "No Active Player";
     }
 
-    public boolean isGameOver() {
-        if(this.mPlayerOne.isDonePlayingRound() == true && this.mPlayerTwo.isDonePlayingRound() == true)
+    private boolean isGameOver() {
+        if(this.mPlayerOne.isDonePlayingRound() && this.mPlayerTwo.isDonePlayingRound())
         {
             setIsGameOver(true);
             this.mPlayerOne.setIsPlaying(false);
@@ -200,7 +200,7 @@ public class Hotter_Colder implements Serializable {
         return mIsGameOver;
     }
 
-    public void setIsGameOver(boolean isGameOver) {
+    private void setIsGameOver(boolean isGameOver) {
         this.mIsGameOver = isGameOver;
     }
 
@@ -222,9 +222,9 @@ public class Hotter_Colder implements Serializable {
 
     public String getNumberOfGuesses()
     {
-        if(mPlayerOne.isPlaying() == true)
+        if(mPlayerOne.isPlaying())
             return "Number of Guesses: "+Integer.toString(this.mPlayerOneNumberOfGuess);
-        else if(mPlayerTwo.isPlaying() == true)
+        else if(mPlayerTwo.isPlaying())
             return "Number of Guesses: "+Integer.toString(this.mPlayerTwoNumberOfGuess);
         else
             return "Number of Guesses: 0";
