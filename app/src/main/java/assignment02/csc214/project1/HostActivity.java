@@ -86,6 +86,7 @@ public class HostActivity extends AppCompatActivity implements MenuFragment.menu
                     .add(R.id.activity_hostRelativeLayout, mMenuFragment)
                     .commit();
             //mWhichFragg = "MENU";
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         }
 
