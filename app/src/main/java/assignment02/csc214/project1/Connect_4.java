@@ -14,6 +14,7 @@ package assignment02.csc214.project1;
 import java.io.Serializable;
 
 public class Connect_4 implements Serializable{
+
     private static final long serialVersionUID = -7504755932014437115L;
     private final Player mPlayerOne;
     private final Player mPlayerTwo;
@@ -125,7 +126,7 @@ public class Connect_4 implements Serializable{
 
         }
 
-        return "";
+        return "NICE MOVE";
     }
 
     //Check whether there is any available slots on board

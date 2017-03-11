@@ -40,6 +40,7 @@ public class Connect4Fragment extends Fragment {
         public void connect4DisplayToast(String message);
     }
 
+
     private Connect4UpdateAvailable mConnect4UpdateAvailable;
     GridView grid;
     int[] imageId = new int[36];

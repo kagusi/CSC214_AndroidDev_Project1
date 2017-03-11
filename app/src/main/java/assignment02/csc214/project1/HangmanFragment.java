@@ -151,6 +151,9 @@ public class HangmanFragment extends Fragment {
 
                 mGame.generateWord();
                 mCurrentPlayerTextView.setText(mGame.getWhosTurn());
+                mDisplayGuessesTextView.setText(mGame.getDisplayGuessedAlphabet());
+                mHangmanImageView.setImageResource(mGame.getImageResID());
+                mNumberOfGuessTextView.setText(mGame.getNumberOfGuesses());
                 //mNumberOfGuessTextView.setText(mGame.getNumberOfGuesses());
             }
         });

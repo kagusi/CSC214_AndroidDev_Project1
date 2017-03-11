@@ -37,11 +37,11 @@ public class Hangman implements Serializable{
     private int mCurrentIndex;
     int mImageResID;
 
-    public Hangman(Player playerOne, Player playerTwo) {
+    private Hangman(Player playerOne, Player playerTwo) {
 
         //Hangman Images
         this.mImageBank = new Images[] {
-                new Images(R.mipmap.blankhangman, false),
+                new Images(android.R.color.transparent, false),
                 new Images( R.mipmap.stage1, false),
                 new Images( R.mipmap.stage2, false),
                 new Images( R.mipmap.stage3, false),
@@ -91,8 +91,9 @@ public class Hangman implements Serializable{
         for(int i = 0; i<word.length(); i++)
             this.mGeneratedWord[i] = word.substring(i, (i+1));
         //this.mGeneratedWord = mWordBank[index].split("");
-        fillmGuessedAlphabetBank();
+
         this.mGuessedAlphabetBank = new String[mGeneratedWord.length];
+        fillmGuessedAlphabetBank();
     }
 
     //Start Game
